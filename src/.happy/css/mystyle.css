@@ -1,0 +1,190 @@
+body{
+     background-color:#ffffff;
+     color:#333333;
+    font-family: "メイリオ","Hiragino Kaku Gothic Pro",sans-serif;
+ 
+    
+
+
+}
+p{
+    font-size:90%;
+}
+h1{
+    font-size: 180%;
+}
+h2{
+    color: aliceblue;
+    text-align: center;
+    font-size: 120%;
+    background-color: yellowgreen;
+}
+
+footer{
+    text-align: center;
+}
+article{
+    clear: both;
+    width: 960px;
+    margin-left: auto;
+    margin-right:auto;
+   
+    position: relative;
+}
+
+
+.catch{
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    color:#ffffff;
+    text-shadow: 1px 5px #333333;
+    
+    
+}
+nav ul{
+    font-weight: 900;
+    text-align: right;
+    padding-top: 26px;
+    padding-bottom: 5px;
+    margin: 0;
+    
+}
+nav li{
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right:1px solid #ffffff;
+}
+ul{
+    font-weight: bold;
+    background-color: #ffffff;
+    color:#00ff00;
+}
+header img{
+    float: left;
+}
+article{
+    clear:both;
+}
+header-in{
+    width: 960px;
+    margin-right: auto;
+}
+
+ol li{
+    display: inline;
+    margin-right: 5px;
+    font-size: 80%;
+}
+ol{
+    padding-left: 0;
+}
+
+input{
+    display: block;
+    width: 400px;
+}
+textarea{
+    display: block;
+    width: 600px;
+    height: 120px;
+}
+button{
+    width: 180px;
+    padding: 10px;
+    
+}
+
+table{
+    border: 5px solid #333333;
+    font-size: 150%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+th{
+    border: 1px solid #333333;
+    padding: 10px;
+    width: 20%;
+    background-color: cornsilk;
+}
+td{
+    border: 1px solid #333333;
+    padding-left:150px;
+    
+    
+}
+
+td.ohituji{
+    background: linear-gradient(90deg, red 0%,red 50%,orange 50%,orange 100%);
+}
+td.ousi{
+    background: linear-gradient(90deg, green 0%,green 50%,pink 50%,pink 100%);
+}
+td.futago{
+    background: linear-gradient(90deg, yellow 0%,yellow 50%,#ADD8E6 50%,#ADD8E6 100%);
+}
+td.kani{
+    background: linear-gradient(90deg, #ffffff 0%,#ffffff 50%,#d4d4d4 50%,#d4d4d4  100%);
+}
+td.sisi{
+    background: linear-gradient(90deg, #eee8ee 0%,#eee8ee 50%,#ffa500 50%,#ffa500 100%);
+}
+td.otome{
+    background: linear-gradient(90deg, #202F55 0%,#202F55 50%,#eedcb3 50%,#eedcb3 100%);
+}
+td.tenbin{
+    background: linear-gradient(90deg, #AEC6CF 0%,#AEC6CF 50%, #ffc0cb 50%,#ffc0cb 100%);
+}
+td.sasori{
+    background: linear-gradient(90deg, #800020 0%,#800020 50%,black 50%,black 100%);
+}
+td.ite{
+    background: linear-gradient(90deg, #800080 0%,#800080 50%,#30D5CB 50%,#30D5CB  100%);
+}
+td.yagi{
+    background: linear-gradient(90deg, gray 0%,gray 50%,brown 50%,brown 100%);
+}
+td.mizugame{
+    background: linear-gradient(90deg, #AFDFE4 0%,#AFDFE4 50%,silver 50%,silver 100%);
+}
+td.uo{
+    background: linear-gradient(90deg, #cab8d9 0%,#cab8d9 50%,#00ac97 50%,#00ac97  100%);
+}
+
+/*959px以下の場合*/
+@media(max-width:959px){
+    header img{
+        float: none;
+}
+    nav ul{
+        text-align: left;
+        padding: 0;
+    }
+}
+article{
+    width:auto;
+
+}
+article img{
+    max-width: 100%;
+    height: auto;
+    
+}
+/*600以下の場合*/
+@media(max-width:600px){
+    nav li{
+    font-size: 75%;    
+    padding-left:2px;
+    padding-right:2px;
+}
+}
+.catch{
+    top: 5px;
+    left:5px;
+}
+
+

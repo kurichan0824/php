@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<mate charset="UTF-8">
+<title>ハーブの恵み:トップページ</title>
+<link rel="stylesheet" href="css/mystyle.css"> 
+
+<body>
+    <script>
+        // JavaScriptコードはここに記述
+        let currentSlide = 0;
+        const slides = [
+            "image/maingazou.jpg",
+            "image/herb1.jpg",
+            "image/aroma1.jpg"
+        ];
+
+        function changeSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            document.querySelector('article img').src = slides[currentSlide];
+        }
+
+        // ページ読み込み後にスライドショーを開始
+        window.onload = function () {
+            setInterval(changeSlide, 3000); // 3秒ごとに切り替え
+        };
+    </script>
+    </body>
+    
+    </html>
+    方法2：外部JSファイルとして分離（推奨）
+    jsフォルダを作成し、slideshow.jsのようなファイルを作成
+    
+    text
+    your-project/
+    ├── index.html
+    ├── js/
+    │ └── slideshow.js
+    └── image/
+    slideshow.jsにコードを記述：
+    
+    javascript
+    let currentSlide = 0;
+    const slides = [
+    "image/maingazou.jpg",
+    "image/herb1.jpg",
+    "image/aroma1.jpg"
+    ];
+    
+    function changeSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    document.querySelector('article img').src = slides[currentSlide];
+    }
+    
+    // DOMが完全に読み込まれてから実行
+    document.addEventListener('DOMContentLoaded', function() {
+    setInterval(changeSlide, 3000);
+    });
+    HTMLで読み込み：
+    
+    html
+    
+    <body>
+        <!-- コンテンツ -->
+        <script src="js/slideshow.js"></script>
+    </body>
+    重要な注意点
+    実行タイミング：
+    
+    window.onload または DOMContentLoaded で囲まないと、画像要素が読み込まれる前にJSが実行されエラーになる可能性があります
+    
+    画像パス：
+    
+    画像がimage/フォルダ内に存在することを確認
+    
+    実際のファイル名（herb1.jpgなど）が正しいか確認
+    
+    CSS調整（必要に応じて）：
+    
+    css
+    article img {
+    transition: opacity 0.5s ease-in-out;
+    }
+    を追加すると、画像切り替えがスムーズになります
+    
+    トラブルシューティング
+    動作しない場合：
+    
+    ブラウザの開発者ツール（F12）でコンソールエラーを確認
+    
+    console.log(slides[currentSlide]); を追加してパスが正しいか確認
+    
+    画像ファイルが実際に存在するか確認
+    
+    外部JSファイル方式がメンテナンス性が高くおすすめですが、まずはHTML内に記述して動作確認するのも良いでしょう。
+    
+    New chat
+
+<header>
+    <div class="header-in">
+    <img src="image/sizenn.png" width="300" height="100" alt="ハーブの恵み">
+<nav>
+    <ul>
+        <li>トップ</li>
+        <li><a href="7sen.html">おすすめアロマ6選</a></li>
+        <li><a href="12seiza.html">12星座別アロマ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="seiza2">12星座別症状</a></li>
+    </ul>
+</nav>
+        </div>
+</header>
+<article>
+    <img src="image/maingazou.jpg"  width="1500" height="430" >
+    <div class="catch">
+        
+<h1>植物のチカラで生き生きと</h1>
+<p>あなたのライフスタイルを輝かせる、ココロとカラダに自然の恵みを</p>
+    </div>
+    <section>
+        <h2>お知らせ</h2>
+        <li><time datetime="2025/1/14">1/1</time>ホームページをOPENしました！</li>
+        <li><time= datetime="2025/1/15">1/15</time>星座別アロマUPしました。</li>
+        <li><time= datetime="2025/1/1">1/25</time>ご意見.ご感想お待ちしております。
+    </section>
+</article>
+   <footer>
+       <small>ha-buno-megumi-2025</small>
+    </footer> 
+</body>
